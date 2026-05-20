@@ -1,1 +1,114 @@
+/* Reset + box model */
+* {
+    box-sizing: border-box;
+}
 
+/* Element selector */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Header */
+header {
+    background: linear-gradient(to right, #0f4c81, #1e88e5);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Descendant selector */
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Descendant selector */
+nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+/* Navigation links */
+nav a {
+    text-decoration: none;
+    color: #ffe082;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* Pseudo-class selector */
+nav a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/* Class selector */
+.active {
+    background-color: white;
+    color: #0f4c81;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Section */
+section {
+    padding: 20px;
+}
+
+/* ID selector */
+#about img {
+    border-radius: 10px;
+    border: 3px solid #1e88e5;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+/* Table cells */
+th,
+td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Header row */
+thead {
+    background-color: #0f4c81;
+    color: white;
+}
+
+/* Zebra striping */
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Hover row */
+tbody tr:hover {
+    background-color: #d6eaff;
+}
+
+/* Aside */
+aside {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 20px;
+    border-left: 5px solid #1e88e5;
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: #ccc;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
