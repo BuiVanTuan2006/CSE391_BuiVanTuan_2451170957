@@ -1,1 +1,131 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout-Đặt hàng</title>
+</head>
+<body>
+    <header>
+        <h1>Thanh toán đơn hàng</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Giỏ hàng</h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>STT</th>
+                        <th>Sản phẩm</th>
+                        <th>Đơn giá</th>
+                        <th>Số lượng</th>
+                        <th>Thành tiền</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Áo thun basic</td>
+                        <td>199.000đ</td>
+                        <td>2</td>
+                        <td>398.000đ</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>3</td>
+                        <td>Quần jeans</td>
+                        <td>399.000đ</td>
+                        <td>1</td>
+                        <td>399.000</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Giày sneaker</td>
+                        <td>699.000đ</td>
+                        <td>1</td>
+                        <td>699.000đ</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="4"><strong>Tổng cộng</strong></td>
+                        <td><output>1.496.000đ</output></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
 
+        <section>
+            <h3>Tìm nhanh sản phẩm</h3>
+            <input list="products" placeholder="Nhập tên sản phẩm">
+            <datalist id="products">
+                <option value="Áo thun basic">
+                <option value="Quần jeans">
+                <option value="Giày sneaker">
+                <option value="Áo hoodie">
+            </datalist>
+        </section>
+
+        <section>
+            <h2>Thanh toán</h2>
+            <form action="#" method="POST">
+                <fieldset>
+                    <legend>Phương thức thanh toán</legend>
+                    <label>
+                        <input type="radio" name="payment" value="cod" required>
+                        COD
+                    </label>
+                    <label>
+                        <input type="radio" name="payment" value="bank">
+                        Chuyển khoản
+                    </label>
+                    <label>
+                        <input type="radio" name="payment" value="ewallet">
+                        Ví điện tử
+                    </label>
+                </fieldset>
+
+                <p>
+                    <label>Mã giảm giá:</label>
+                    <input type="text" name="coupon" pattern="SALE[0-9]{4}" placeholder="VD: SALE2026">
+                </p>
+
+                <p>
+                    <label>Ghi chú:</label><br>
+                    <textarea name="note" rows="4"></textarea>
+                </p>
+
+                <fieldset>
+                    <legend>Thông tin giao hàng</legend>
+                    <p>
+                        <label>Ngày giao:</label><br>
+                        <input type="date" min="2026-04-24" required>
+                    </p>
+
+                    <p>
+                        <label>Khung giờ:</label><br>
+                        <select required>
+                            <option value="">Chọn</option>
+                            <option>Sáng (8-12h)</option>
+                            <option>Chiều (14-18h)</option>
+                            <option>Tối(18-21h)</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label>Thời gian giao:</label>
+                        <input type="range" min="1" max="7" step="1">
+                    </p>
+                </fieldset>
+                 <p>
+                    Điểm tích lũy:
+                    <progress value="60" max="100"></progress>
+                 </p>
+                 <button type="submit" aria-label="Xác nhận đặt hàng">
+                    Xác nhận đặt hàng
+                 </button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
