@@ -1,1 +1,88 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positioning Demo</title>
 
+    <link rel="stylesheet" href="positioning.css">
+</head>
+<body>
+
+    <!-- Fixed Header -->
+    <header>
+        <div class="logo">MyShop</div>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Products</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Layout -->
+    <div class="container">
+
+        <!-- Main Content -->
+        <main>
+
+            <h1>Danh sách sản phẩm</h1>
+
+            <div class="product-card">
+
+                <div class="badge">HOT</div>
+
+                <img src="https://via.placeholder.com/300x180"
+                     alt="Product">
+
+                <h2>Gaming Laptop</h2>
+
+                <p>
+                    Hiệu năng mạnh mẽ cho học tập và gaming.
+                </p>
+
+            </div>
+
+            <!-- Nội dung dài để test scroll -->
+            <div class="long-content">
+                <p>Scroll xuống để test fixed header và sticky sidebar.</p>
+                <p>Lorem ipsum dolor sit amet...</p>
+                <p>Lorem ipsum dolor sit amet...</p>
+                <p>Lorem ipsum dolor sit amet...</p>
+                <p>Lorem ipsum dolor sit amet...</p>
+                <p>Lorem ipsum dolor sit amet...</p>
+                <p>Lorem ipsum dolor sit amet...</p>
+                <p>Lorem ipsum dolor sit amet...</p>
+                <p>Lorem ipsum dolor sit amet...</p>
+                <p>Lorem ipsum dolor sit amet...</p>
+                <p>Lorem ipsum dolor sit amet...</p>
+                <p>Lorem ipsum dolor sit amet...</p>
+                <p>Lorem ipsum dolor sit amet...</p>
+                <p>Lorem ipsum dolor sit amet...</p>
+                <p>Lorem ipsum dolor sit amet...</p>
+                <p>Lorem ipsum dolor sit amet...</p>
+            </div>
+
+        </main>
+
+        <!-- Sticky Sidebar -->
+        <aside class="sidebar">
+            <h2>Sidebar</h2>
+
+            <ul>
+                <li>Danh mục 1</li>
+                <li>Danh mục 2</li>
+                <li>Danh mục 3</li>
+                <li>Danh mục 4</li>
+            </ul>
+        </aside>
+
+    </div>
+
+    <!-- Scroll To Top -->
+    <button class="scroll-top">
+        ↑
+    </button>
+
+</body>
+</html>
