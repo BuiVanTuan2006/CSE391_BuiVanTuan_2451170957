@@ -1,1 +1,82 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model Lab</title>
 
+    <link rel="stylesheet" href="boxmodel.css">
+</head>
+<body>
+
+    <h1>Box Model Lab</h1>
+    <!-- PHẦN 1 -->
+    <section>
+        <h2>Phần 1 — content-box vs border-box</h2>
+
+        <div class="box-wrapper">
+
+            <div class="box content-box">
+                <h3>Content Box</h3>
+                <p>
+                    width: 300px <br>
+                    padding: 20px <br>
+                    border: 5px
+                </p>
+            </div>
+
+            <div class="box border-box">
+                <h3>Border Box</h3>
+                <p>
+                    width: 300px <br>
+                    padding: 20px <br>
+                    border: 5px
+                </p>
+            </div>
+
+        </div>
+    </section>
+    <!-- PHẦN 2 -->
+    <section>
+        <h2>Phần 2 — Layout 3 cột</h2>
+
+        <h3>Trường hợp KHÔNG dùng border-box</h3>
+
+        <div class="container no-border-box">
+
+            <div class="sidebar">
+                Sidebar
+            </div>
+
+            <div class="content">
+                Main Content
+            </div>
+
+            <div class="ads">
+                Ads
+            </div>
+
+        </div>
+
+        <h3>Trường hợp CÓ dùng border-box</h3>
+
+        <div class="container border-box-layout">
+
+            <div class="sidebar">
+                Sidebar
+            </div>
+
+            <div class="content">
+                Main Content
+            </div>
+
+            <div class="ads">
+                Ads
+            </div>
+
+        </div>
+
+    </section>
+
+</body>
+</html>
