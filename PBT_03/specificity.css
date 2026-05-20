@@ -1,1 +1,61 @@
+/* 1. Element selector */
+/* Specificity: 0,0,1 */
+p {
+    color: red;
+}
 
+/* 2. Descendant selector */
+/* Specificity: 0,0,2 */
+body p {
+    color: orange;
+}
+
+/* 3. Class selector */
+/* Specificity: 0,1,0 */
+.text {
+    color: blue;
+}
+
+/* 4. Multiple classes */
+/* Specificity: 0,2,0 */
+.text.highlight {
+    color: green;
+}
+
+/* 5. Element + class */
+/* Specificity: 0,1,1 */
+p.text {
+    color: purple;
+}
+
+/* 6. Descendant + class */
+/* Specificity: 0,1,2 */
+body p.text {
+    color: brown;
+}
+
+/* 7. ID selector */
+/* Specificity: 1,0,0 */
+#demo {
+    color: pink;
+}
+
+/* 8. ID + element */
+/* Specificity: 1,0,1 */
+p#demo {
+    color: gray;
+}
+
+/* 9. ID + class */
+/* Specificity: 1,1,0 */
+#demo.highlight {
+    color: teal;
+}
+
+/* 10. ID + 2 classes + element */
+/* Specificity: 1,2,1 */
+p#demo.text.highlight {
+    color: gold;
+    font-size: 40px;
+    font-weight: bold;
+}
