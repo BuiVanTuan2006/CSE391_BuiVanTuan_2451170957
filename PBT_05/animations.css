@@ -1,0 +1,143 @@
+/* animations.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  padding: 40px;
+}
+
+/* HEADER */
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* PRODUCTS */
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+/* CARD */
+.card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+
+  /* Required transition */
+  transition: all 0.3s ease;
+
+  /* Fade in animation */
+  animation: fadeIn 1s ease forwards;
+}
+
+/* 1. CARD HOVER EFFECT */
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+}
+
+/* IMAGE CONTAINER */
+.image-container {
+  overflow: hidden;
+}
+
+/* RESPONSIVE IMAGE */
+.image-container img {
+  width: 100%;
+  display: block;
+
+  /* Smooth zoom */
+  transition: transform 0.4s ease;
+}
+
+/* 3. IMAGE ZOOM */
+.card:hover img {
+  transform: scale(1.1);
+}
+
+/* CONTENT */
+.content {
+  padding: 20px;
+}
+
+.content h3 {
+  margin-bottom: 10px;
+}
+
+.content p {
+  margin-bottom: 20px;
+  color: #666;
+}
+
+/* BUTTON */
+button {
+  padding: 12px 20px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+
+  /* Required transition */
+  transition: all 0.3s ease;
+}
+
+/* 2. BUTTON HOVER */
+button:hover {
+  background: #111827;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* 4. LOADING SPINNER */
+.spinner {
+  width: 70px;
+  height: 70px;
+
+  border: 8px solid #ddd;
+  border-top: 8px solid #2563eb;
+
+  border-radius: 50%;
+
+  margin: 0 auto 50px;
+
+  animation: spin 1s linear infinite;
+}
+
+/* SPIN KEYFRAMES */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* 5. FADE IN */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* CLASS APPLY */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
