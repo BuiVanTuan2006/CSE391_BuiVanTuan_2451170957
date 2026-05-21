@@ -1,0 +1,98 @@
+// _components.scss
+
+body {
+    font-family: $font-primary;
+    background: $gray-color;
+    color: $text-color;
+    margin: 0;
+}
+
+/* HEADER */
+.header {
+    background: $secondary-color;
+    color: $light-color;
+    padding: $spacing-md;
+
+    @include flex-center;
+
+    h1 {
+        font-size: 1.5rem;
+    }
+}
+
+/* PRODUCTS */
+.products {
+    padding: $spacing-lg;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $spacing-lg;
+
+    @include respond-to(tablet) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include respond-to(desktop) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* CARD */
+.card {
+    background: pink;
+    border-radius: $border-radius;
+    overflow: hidden;
+
+    @include card-shadow;
+
+    transition: all 0.3s ease;
+
+    /* NESTED */
+    .card-image {
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+
+    .card-content {
+        padding: $spacing-md;
+    }
+
+    .card-title {
+        font-size: 1.2rem;
+        margin-bottom: $spacing-sm;
+    }
+
+    .card-text {
+        color: #666;
+        margin-bottom: $spacing-md;
+    }
+
+    button {
+        padding: $spacing-sm $spacing-md;
+        border: none;
+        background: $primary-color;
+        color: white;
+        border-radius: 6px;
+        cursor: pointer;
+
+        transition: all 0.3s ease;
+
+        &:hover {
+            background: $secondary-color;
+            transform: scale(1.05);
+        }
+    }
+
+    &:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+    }
+
+    &.featured {
+        border: 3px solid gold;
+    }
+}
