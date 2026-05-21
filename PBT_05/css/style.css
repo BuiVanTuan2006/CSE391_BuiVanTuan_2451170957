@@ -1,1 +1,92 @@
+/* FLEX CENTER */
+/* CARD SHADOW */
+/* RESPONSIVE */
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  color: #333333;
+  margin: 0;
+}
 
+/* HEADER */
+.header {
+  background: #111827;
+  color: #ffffff;
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header h1 {
+  font-size: 1.5rem;
+}
+
+/* PRODUCTS */
+.products {
+  padding: 32px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+@media (min-width: 768px) {
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .products {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* CARD */
+.card {
+  background: pink;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  /* NESTED */
+}
+.card .card-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.card .card-content {
+  padding: 16px;
+}
+.card .card-title {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+.card .card-text {
+  color: #666;
+  margin-bottom: 16px;
+}
+.card button {
+  padding: 8px 16px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.card button:hover {
+  background: #111827;
+  transform: scale(1.05);
+}
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+.card.featured {
+  border: 3px solid gold;
+}
+
+body {
+  background: red;
+}
+
+/*# sourceMappingURL=style.css.map */
