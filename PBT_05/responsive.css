@@ -1,0 +1,217 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  color: #333;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.header {
+  background: #111827;
+  color: white;
+  padding: 16px 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.hamburger {
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.nav {
+  display: none;
+}
+
+.container {
+  padding: 20px;
+}
+
+.sidebar,
+.ads,
+.tablet-filter {
+  display: none;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  padding-bottom: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+  font-size: 1.1rem;
+  margin: 15px;
+}
+
+.card p {
+  font-size: 0.9rem;
+  margin: 0 15px 10px;
+  color: #666;
+}
+
+.card span {
+  display: block;
+  margin: 0 15px 15px;
+  font-weight: bold;
+  color: #2563eb;
+}
+
+.card button {
+  margin-left: 15px;
+  padding: 10px 18px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background: #1d4ed8;
+}
+
+.footer {
+  background: #111827;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+
+@media (min-width: 768px) {
+
+  body {
+    font-size: 17px;
+  }
+
+  .nav {
+    display: flex;
+    gap: 20px;
+  }
+
+  .nav a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .tablet-filter {
+    display: block;
+    background: white;
+    padding: 15px 20px;
+  }
+
+  .tablet-filter select {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card h3 {
+    font-size: 1.2rem;
+  }
+
+  .card p {
+    font-size: 1rem;
+  }
+}
+
+
+@media (min-width: 1024px) {
+
+  body {
+    font-size: 18px;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 220px 1fr 200px;
+    gap: 20px;
+    align-items: start;
+  }
+
+  .sidebar,
+  .ads {
+    display: block;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .tablet-filter {
+    display: none;
+  }
+
+  .products {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .sidebar h3,
+  .ads h3 {
+    margin-bottom: 15px;
+  }
+
+  .filter-group {
+    margin-bottom: 20px;
+  }
+
+  .filter-group h4 {
+    margin-bottom: 10px;
+  }
+
+  .filter-group label {
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  .ad-box {
+    background: #2563eb;
+    color: white;
+    padding: 20px;
+    margin-bottom: 15px;
+    text-align: center;
+    border-radius: 8px;
+    font-weight: bold;
+  }
+
+  .card h3 {
+    font-size: 1.3rem;
+  }
+
+  .card p {
+    font-size: 1rem;
+  }
+}
